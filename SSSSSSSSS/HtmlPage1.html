@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Auto-Play with Popup</title>
+    <style>
+        /* 設置基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        iframe {
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Surprise!!</h1>
+    <!-- 嵌入 YouTube 視頻的 iframe -->
+    <iframe id="youtubeVideo"
+            width="560"
+            height="315"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+
+    <script>
+        // 當頁面加載時觸發
+        window.onload = function () {
+            // 彈出提示框
+            alert("Surprise!!");
+
+            // 自動播放 YouTube 視頻
+            const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"; // 自動播放並靜音
+            document.getElementById("youtubeVideo").src = videoUrl;
+        };
+    </script>
+</body>
+</html>
